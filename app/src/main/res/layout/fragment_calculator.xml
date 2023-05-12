@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/square_rounded_bottom"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/view_result"
+            style="@style/CalculatorExpressionTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="24dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="end"
+            android:paddingEnd="12dp"
+            app:layout_constraintBottom_toTopOf="@id/view_input"
+            tools:ignore="RtlSymmetry"
+            tools:text="123" />
+
+        <TextView
+            android:id="@+id/view_input"
+            style="@style/CalculatorInputTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:autoSizeTextType="uniform"
+            android:background="@null"
+            android:paddingEnd="12dp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:text="123" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        tools:ignore="HardcodedText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="1" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="2" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="3" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.LightBlue"
+                android:text="/" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="4" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="5" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="6" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.LightBlue"
+                android:text="*" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="7" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="8" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="9" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.LightBlue"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="0" />
+
+            <ImageButton
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/clear"
+                app:tint="@color/white" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.DarkBlue"
+                android:text="=" />
+
+            <Button
+                style="@style/CalculatorButtonStyle.LightBlue"
+                android:text="-" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
